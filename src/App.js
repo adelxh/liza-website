@@ -48,11 +48,9 @@ function App() {
     <h1 className="par"><b>Mindfulness Kit</b></h1>
     </Zoom>
     <Zoom bottom cascade>
-         <h2>coming soon</h2>
+         <h2>Coming soon</h2>
          </Zoom>
          
-        {/* <Router> */}
-        {/* <Link to="" id="notify-btn" onClick={submit}>Notify Me!</Link> */}
          <MailchimpSubscribe url={mailchimp} render={({subscribe, status, message}) => (
            <CustomForm status={status} message={message} onValidated={FormData => subscribe(FormData)} />
          )}  />
@@ -65,14 +63,17 @@ function App() {
         
          <p>Follow us on Instagram</p>
          </div>
-         {/* </Router> */}
+
         
         
-         
-         </div>
          <Zoom bottom cascade>
-      <img className="logo" height={750} src={logo} alt=""></img>
+           <div className="image">
+      <img className="logo" height={710} src={logo} alt="" />
+      </div>
       </Zoom>
+     
+         </div>
+      
       
     </div>
   );

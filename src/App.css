@@ -3,14 +3,12 @@ html {
 }
 
 .logo {
+position: absolute;
+  margin-left: 35rem;
+  margin-top: -30rem;
+} 
 
-  margin-left: 44rem;
-  margin-top: -4rem;
-}
-.App {
-  display: inline-block;
-}
-.main {
+ .main {
   margin-left: 6rem;
   position: absolute;
   margin-top: 10rem;
@@ -20,12 +18,11 @@ h1 {
   font-family: Alte Haas Grotesk;
   font-size: 35px;
   font-weight: 200;
-  
 
 }
 .par {
   margin-top: -35px;
-}
+} 
 h2 {
   color: white;
   text-transform: uppercase;
@@ -44,16 +41,7 @@ input::placeholder {
   opacity: 46%;
 }
 
-#notify-btn {
-  background-color: none;
-  border: 1px solid white;
-padding: 12px 30px 12px 30px;
-  margin-left: 15px;
-  color: white;
-  text-decoration: none;
-  font-family: Alte Haas Grotesk;
 
-}
 
 .topLogo {
   margin-left: 6rem;
@@ -79,6 +67,10 @@ padding: 12px 30px 12px 30px;
   font-family: Alte Haas Grotesk;
 
 }
+.main-text {
+  margin-left: 2rem;
+  margin-top: -2rem;
+}
 
 
 p:hover {
@@ -98,6 +90,11 @@ padding: 12px 30px 12px 30px;
   cursor: pointer;
   
 }
+button:hover {
+  color: lightgray;
+  transition: 0.5s;
+ border-radius: 10px;
+}
 
 .success {
 
@@ -106,3 +103,5 @@ padding: 12px 30px 12px 30px;
  
  
 }
+
+

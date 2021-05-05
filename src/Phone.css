@@ -26,28 +26,30 @@
     }
    
     input {
-        width: 215px;
+        width: 190px;
         height: 1px;
         font-size: 12px;
         margin-left: -3px;
-        padding: 15px;
+        padding: 10px;
     }
     .logo {
+        position: absolute;
         display: block;
-        margin-left: 15px;
+        margin-left: 1px;
         height: 330px;
-        width: 330px;
-        margin-top: 20rem;
+        margin-top: -10px;
+  
+       
+        margin-top: 1rem;
     }
     .par {
         margin-top: -23px;
     }
-    #notify-btn {
-        padding: 5px 10px 7px 10px;
-        display: inline;
-        margin-left:4px;
-        margin-top: 1rem;
-    }
+  button {
+      padding: 0px 1px 0px 1px;
+      margin-top: -2rem;
+  }
+       
     p{
         font-size: 15px;
     }
@@ -55,3 +57,21 @@
 
 
 }
+
+
+/* big screens */
+@media (min-width : 1444px){ 
+    .logo {
+        position: absolute;
+        height: 800px;
+        
+    }
+    h1 {
+        font-size: 45px;
+    }
+    .main {
+        margin-top: 20rem;
+    }
+    
+}
+
