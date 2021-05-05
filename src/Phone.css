@@ -60,7 +60,7 @@
 
 
 /* big screens */
-@media (min-width : 1444px){ 
+@media (min-width : 1444px) and (max-width: 1800px){ 
     .logo {
         position: absolute;
         height: 800px;
@@ -72,6 +72,14 @@
     .main {
         margin-top: 20rem;
     }
+    
+}
+@media (min-width : 1920px){ 
+   .main {
+       margin-top: 10rem;
+       margin-left: 25rem;
+       height: 1000px;
+   }
     
 }
 

@@ -37,9 +37,6 @@ input {
   height: 10px;
   margin-top: -2rem;
 }
-input::placeholder {
-  opacity: 46%;
-}
 
 
 
