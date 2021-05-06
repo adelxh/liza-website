@@ -8,18 +8,44 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 // import AOS from 'aos'; 
 // import 'aos/dist/aos.css'
 import Zoom from 'react-reveal/Zoom';
+import swal from 'sweetalert'; 
+
 
 
 const CustomForm = ({status, message, onValidated}) => {
+ 
   let email; 
-  const submit = () => 
+  let regex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+  const submit = () => {
     email && 
     email.value.indexOf("@") >  -1 && onValidated({EMAIL: email.value});
+   
+      if (email.value === '') { // checks if the email address field is empty 
+       swal({
+         title: 'ERROR', 
+         text: "Please enter email address", 
+         icon: 'error',
+         dangerMode: true
+       });
+      }
+      // checks if the email address is in proper format
+     else if (!regex.test(email.value)) {
+      swal({
+        title: 'ERROR', 
+        text: "Please enter valid email address", 
+        icon: 'warning', 
+        dangerMode: true
+      });
+     }
+  }
+
+  
+
     return (
       <div>
         {status === "sending" && <div>sending....</div>}
         {status === "error" && (
-          <div style={{color: 'red'}} dangerouslySetInnerHTML={{__html: message}} />
+         alert("please enter valid email address")
         )}
 
         {status === "success" && (
@@ -29,11 +55,13 @@ const CustomForm = ({status, message, onValidated}) => {
         <button onClick={submit}>Notify Me!</button>
         
         </div>
+        
        
     );
 }
 
 function App() {
+  
   let instagram = "https://www.instagram.com/nimiminds/"; 
   const mailchimp = 'https://nimiminds.us1.list-manage.com/subscribe/post?u=7bf065696248ba67881c08fb6&amp;id=035619dd6f'; 
 
@@ -58,10 +86,15 @@ function App() {
          <div className="socials">
           <a href={instagram} target="_blank" rel="noreferrer">
            <img className="social" src={social} alt="" ></img>
+          
+           </a>
+           <a href={instagram} target="_blank" rel="noreferrer">
+           <p>Follow us on Instagram</p>
            </a>
         
         
-         <p>Follow us on Instagram</p>
+        
+       
          </div>
 
         
